@@ -24,6 +24,14 @@ header {
     margin-right: 15px;
   }
 
+  span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5C5C5C;
+  }
+
   h3,
   p {
     margin: 0;
@@ -34,16 +42,6 @@ header {
   h1 {
     margin: 0;
   }
-}
-
-.button {
-  background: #FFFFFF;
-  border: 1px solid #F2F2F2;
-  box-sizing: border-box;
-  border-radius: 8px;
-  height: 32px;
-  width: 32px;
-  cursor: pointer;
 }
 
 .search-block {
