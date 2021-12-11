@@ -4,7 +4,6 @@ import AppContext from "../context";
 
 function Favorites({ onAddToCart, isLoading }) {
   const { favorites, onAddToFavorite } = React.useContext(AppContext);
-  console.log(favorites);
   return (
     <div className="content p-40">
       <div className="d-flex align-center justify-between mb-40">
