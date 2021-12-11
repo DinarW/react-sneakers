@@ -1,5 +1,5 @@
 * {
-  font-family: 'Inter', system-ui;
+  font-family: "Inter", system-ui;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
 }
 
 .wrapper {
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
   border-radius: 20px;
   max-width: 1080px;
@@ -18,7 +18,7 @@ body {
 }
 
 header {
-  border-bottom: 1px solid #EAEAEA;;
+  border-bottom: 1px solid #eaeaea;
 
   img {
     margin-right: 15px;
@@ -29,7 +29,7 @@ header {
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-    color: #5C5C5C;
+    color: #5c5c5c;
   }
 
   h3,
@@ -110,7 +110,7 @@ header {
   width: 420px;
   height: 100%;
   right: 0;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
   padding: 30px;
 
@@ -132,7 +132,7 @@ header {
       display: flex;
       align-items: flex-end;
       margin-bottom: 20px;
-    
+
       div {
         flex: 1;
         height: 1px;
@@ -146,6 +146,10 @@ header {
 
   .greenButton {
     position: relative;
+
+    &:disabled {
+      animation: button-loading 0.6s ease-in-out;
+    }
 
     &:hover {
       img {
@@ -163,24 +167,29 @@ header {
 }
 
 .greenButton {
-    width: 100%;
-    height: 55px;
-    background: #9DD558;
-    border-radius: 18px;
-    border: 0;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.1s ease-in-out;
+  width: 100%;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
 
-    &:hover {
-      background: lighten($color: #9dd558, $amount: 5%);
-    }
-  
-    &:active {
-      background: darken($color: #9dd558, $amount: 5%);
-    }
+  &:hover {
+    background: lighten($color: #9dd558, $amount: 5%);
+  }
+
+  &:active {
+    background: darken($color: #9dd558, $amount: 5%);
+  }
+
+  &:disabled {
+    background-color: #bebebe !important;
+    cursor: default;
+  }
 }
 
 .items {
@@ -219,5 +228,17 @@ header {
     &:hover {
       opacity: 1;
     }
+  }
+}
+
+@keyframes button-loading {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
   }
 }
